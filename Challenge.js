@@ -13,11 +13,11 @@ const times = [
   },
   {
     start: 6,
-    end: 10
+    end: 15
   },
   {
     start: 8,
-    end: 15
+    end: 14
   },
   {
     start: 40,
@@ -27,6 +27,7 @@ const times = [
 
 let sorted;
 let UVTChunks = [];
+let UVT = 0;
 
 // Take the time inputs and sort them in ascending order based on the start times
 const sortTimes = times => {
@@ -58,7 +59,20 @@ const checkGaps = sorted => {
   });
 };
 
+// Add the total number to get the UVT
+const getUVT = UVTChunks => {
+  let UVT = 0;
+  UVTChunks.map(chunk => {
+    let max = 0;
+    let min = 0;
+    max = Math.max(...chunk.map(o => o.end), 0); // Get the latest ending time in the array
+    min = Math.min(...chunk.map(o => o.start)); // Get the earliest start time in the array
+    UVT = UVT + (max - min);
+  });
+  return UVT;
+};
+
 sorted = sortTimes(times);
 
 checkGaps(sorted);
-console.log(UVTChunks);
+UVT = getUVT(UVTChunks);
