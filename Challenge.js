@@ -18,6 +18,10 @@ const times = [
   {
     start: 8,
     end: 15
+  },
+  {
+    start: 40,
+    end: 45
   }
 ];
 
@@ -36,15 +40,17 @@ const checkGaps = sorted => {
   let tempUVT = [];
   sorted.map((time, i, sorted) => {
     if (sorted[i + 1]) {
+      // Add times to temp array if there are no gaps
       if (time.end > sorted[i + 1].start) {
         tempUVT.push(time);
       } else {
+        // If there is a gap, add the last time and add the temp array to UVTChunk
         tempUVT.push(time);
         UVTChunks.push(tempUVT);
-        tempUVT = [];
-        count++;
+        tempUVT = []; // Clear temp array
       }
     }
+    // Add the final time
     if (i === sorted.length - 1) {
       tempUVT.push(time);
       UVTChunks.push(tempUVT);
