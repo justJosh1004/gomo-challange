@@ -22,7 +22,7 @@ const times = [
 ];
 
 let sorted;
-let UVTChunks;
+let UVTChunks = [];
 
 // Take the time inputs and sort them in ascending order based on the start times
 const sortTimes = times => {
@@ -33,25 +33,26 @@ const sortTimes = times => {
 
 // Once sorted, check to see if there are any gaps
 const checkGaps = sorted => {
-  // If there is a gap, splice out the ranges
+  let tempUVT = [];
   sorted.map((time, i, sorted) => {
-    // console.log(sorted.length);
-    console.log(
-      `The time range is ${time.start}-${time.end}. this is number ${i +
-        1} on the list.`
-    );
-    // console.log(sorted[i + 1].end);
     if (sorted[i + 1]) {
       if (time.end > sorted[i + 1].start) {
-        console.log('There is no gap');
+        tempUVT.push(time);
       } else {
-        console.log('There is a gap');
+        tempUVT.push(time);
+        UVTChunks.push(tempUVT);
+        tempUVT = [];
+        count++;
       }
     }
-    console.log('');
+    if (i === sorted.length - 1) {
+      tempUVT.push(time);
+      UVTChunks.push(tempUVT);
+    }
   });
 };
 
 sorted = sortTimes(times);
 
 checkGaps(sorted);
+console.log(UVTChunks);
