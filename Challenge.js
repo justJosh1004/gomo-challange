@@ -13,7 +13,7 @@ const times = [
   },
   {
     start: 6,
-    end: 15
+    end: 20
   },
   {
     start: 8,
@@ -22,11 +22,20 @@ const times = [
   {
     start: 40,
     end: 45
+  },
+  {
+    start: 24,
+    end: 28
   }
 ];
 
+const state = {
+  currentMax: 0
+};
+
 let sorted;
 let UVTChunks = [];
+let fixedUVT = [];
 let UVT = 0;
 
 // Take the time inputs and sort them in ascending order based on the start times
@@ -59,6 +68,28 @@ const checkGaps = sorted => {
   });
 };
 
+// Combine chunks that overlap
+const overlapFix = UVTChunks => {
+  UVTChunks.map((chunk, i, UVTChunks) => {
+    let currentMax = 0;
+    let nextMin;
+    currentMax = Math.max(...chunk.map(o => o.end), 0);
+    nextMin = UVTChunks[i + 1]
+      ? Math.min(...UVTChunks[i + 1].map(o => o.start))
+      : null;
+
+    // Check if the current chuck max is greater than the next chunk's min
+    if (currentMax > nextMin && nextMin) {
+      // Combine chunks if they overlap
+      fixedUVT.push(chunk.concat(UVTChunks[i + 1]));
+      // Take out combined chunks from original
+      UVTChunks.splice(i, 2);
+    }
+  });
+  // Combine fixed chunks with updated array
+  return fixedUVT.concat(UVTChunks);
+};
+
 // Add the total number to get the UVT
 const getUVT = UVTChunks => {
   let UVT = 0;
@@ -67,6 +98,7 @@ const getUVT = UVTChunks => {
     let min = 0;
     max = Math.max(...chunk.map(o => o.end), 0); // Get the latest ending time in the array
     min = Math.min(...chunk.map(o => o.start)); // Get the earliest start time in the array
+    console.log(`Min: ${min}. Max: ${max}`);
     UVT = UVT + (max - min);
   });
   return UVT;
@@ -74,5 +106,13 @@ const getUVT = UVTChunks => {
 
 sorted = sortTimes(times);
 
+// calculateUVT(sorted);
 checkGaps(sorted);
-UVT = getUVT(UVTChunks);
+console.log('UVT Array');
+console.log(UVTChunks);
+updatedUVT = overlapFix(UVTChunks);
+console.log('Updated UVT Array');
+console.log(updatedUVT);
+// console.log(UVTChunks);
+UVT = getUVT(updatedUVT);
+console.log(UVT);
