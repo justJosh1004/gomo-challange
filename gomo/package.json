@@ -2,7 +2,7 @@
   "name": "gomo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://justJosh1004.github.io/gomo-challenge",
+  "homepage": "https://justjosh1004.github.io/gomo-challenge",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.5",
