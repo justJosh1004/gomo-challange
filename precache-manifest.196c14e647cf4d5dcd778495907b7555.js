@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "b38cd1459405d16c132a",
-    "url": "/gomo-challenge/static/css/main.1097cf14.chunk.css"
+    "revision": "3dd22f871b3b4cb0b70b",
+    "url": "/gomo-challenge/static/css/main.bb73a68f.chunk.css"
   },
   {
-    "revision": "b38cd1459405d16c132a",
+    "revision": "3dd22f871b3b4cb0b70b",
     "url": "/gomo-challenge/static/js/main.66dbfff1.chunk.js"
   },
   {
@@ -84,7 +84,7 @@ self.__precacheManifest = [
     "url": "/gomo-challenge/static/media/brand-icons.a1a749e8.svg"
   },
   {
-    "revision": "d61bb3df4f25f5a4333ae5214ee5b9b0",
+    "revision": "7d881fc391e3692cda4d90f88731e20c",
     "url": "/gomo-challenge/index.html"
   }
 ];

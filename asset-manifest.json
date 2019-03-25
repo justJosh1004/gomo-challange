@@ -1,5 +1,5 @@
 {
-  "main.css": "/gomo-challenge/static/css/main.1097cf14.chunk.css",
+  "main.css": "/gomo-challenge/static/css/main.bb73a68f.chunk.css",
   "main.js": "/gomo-challenge/static/js/main.66dbfff1.chunk.js",
   "main.js.map": "/gomo-challenge/static/js/main.66dbfff1.chunk.js.map",
   "runtime~main.js": "/gomo-challenge/static/js/runtime~main.ce1bc174.js",
@@ -8,9 +8,9 @@
   "static/js/2.8a2838aa.chunk.js": "/gomo-challenge/static/js/2.8a2838aa.chunk.js",
   "static/js/2.8a2838aa.chunk.js.map": "/gomo-challenge/static/js/2.8a2838aa.chunk.js.map",
   "index.html": "/gomo-challenge/index.html",
-  "precache-manifest.82338f7b19be0cd83cec4cefdf8332c6.js": "/gomo-challenge/precache-manifest.82338f7b19be0cd83cec4cefdf8332c6.js",
+  "precache-manifest.196c14e647cf4d5dcd778495907b7555.js": "/gomo-challenge/precache-manifest.196c14e647cf4d5dcd778495907b7555.js",
   "service-worker.js": "/gomo-challenge/service-worker.js",
   "static/css/2.499114fb.chunk.css.map": "/gomo-challenge/static/css/2.499114fb.chunk.css.map",
-  "static/css/main.1097cf14.chunk.css.map": "/gomo-challenge/static/css/main.1097cf14.chunk.css.map",
+  "static/css/main.bb73a68f.chunk.css.map": "/gomo-challenge/static/css/main.bb73a68f.chunk.css.map",
   "static/media/semantic.min.css": "/gomo-challenge/static/media/outline-icons.ef60a4f6.woff"
 }

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/gomo-challenge/precache-manifest.82338f7b19be0cd83cec4cefdf8332c6.js"
+  "/gomo-challenge/precache-manifest.196c14e647cf4d5dcd778495907b7555.js"
 );
 
 workbox.clientsClaim();
