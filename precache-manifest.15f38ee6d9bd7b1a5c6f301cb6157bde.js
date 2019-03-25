@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "3dd22f871b3b4cb0b70b",
+    "revision": "6efc23375b9c7172115d",
     "url": "/gomo-challenge/static/css/main.bb73a68f.chunk.css"
   },
   {
-    "revision": "3dd22f871b3b4cb0b70b",
-    "url": "/gomo-challenge/static/js/main.66dbfff1.chunk.js"
+    "revision": "6efc23375b9c7172115d",
+    "url": "/gomo-challenge/static/js/main.12e0aa38.chunk.js"
   },
   {
     "revision": "15750dceabbdcb94e225",
     "url": "/gomo-challenge/static/js/runtime~main.ce1bc174.js"
   },
   {
-    "revision": "08209efe5ee20b995767",
+    "revision": "c7f23455448d9e21ad05",
     "url": "/gomo-challenge/static/css/2.499114fb.chunk.css"
   },
   {
-    "revision": "08209efe5ee20b995767",
-    "url": "/gomo-challenge/static/js/2.8a2838aa.chunk.js"
+    "revision": "c7f23455448d9e21ad05",
+    "url": "/gomo-challenge/static/js/2.69a8e162.chunk.js"
   },
   {
     "revision": "cd6c777f1945164224dee082abaea03a",
@@ -84,7 +84,7 @@ self.__precacheManifest = [
     "url": "/gomo-challenge/static/media/brand-icons.a1a749e8.svg"
   },
   {
-    "revision": "7d881fc391e3692cda4d90f88731e20c",
+    "revision": "6eb197f5dc21b0914a0e35cbecd755e8",
     "url": "/gomo-challenge/index.html"
   }
 ];
