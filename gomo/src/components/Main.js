@@ -6,7 +6,8 @@ import {
   Form,
   Grid,
   Divider,
-  List
+  List,
+  Header
 } from 'semantic-ui-react';
 
 class Main extends Component {
@@ -42,26 +43,26 @@ class Main extends Component {
     return (
       <Grid centered style={{ marginTop: '20px', marginBottom: '20px' }}>
         <Form onSubmit={this.handleSubmit}>
-          <Form.Field style={{ width: '300px' }}>
+          <Form.Field style={{ minWidth: '300px' }}>
             <Input
               name="start"
               value={this.state.start}
               onChange={this.onChange}
               type="number"
               min="0"
-              label={{ basic: true, content: 'Start Time' }}
+              label={{ basic: true, content: 'Start Time in milliseconds' }}
               labelPosition="left"
               placeholder="Start time in milliseconds"
             />
           </Form.Field>
-          <Form.Field style={{ width: '300px' }}>
+          <Form.Field style={{ minWidth: '300px' }}>
             <Input
               name="end"
               value={this.state.end}
               onChange={this.onChange}
               type="number"
               min={this.state.start}
-              label={{ basic: true, content: 'End Time' }}
+              label={{ basic: true, content: 'End Time in milliseconds' }}
               labelPosition="left"
               placeholder="End time in milliseconds"
             />
@@ -214,6 +215,9 @@ class Main extends Component {
           Calculate UVT
         </Button>
         <Divider />
+        <Header size="medium">
+          Enter in the start and end time in milliseconds
+        </Header>
         {this.renderTimeInput()}
         <Divider />
         {this.renderTimesList()}
